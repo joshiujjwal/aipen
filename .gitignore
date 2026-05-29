@@ -1,0 +1,105 @@
+# ─── Node / TypeScript ───────────────────────────────────────────────────────
+node_modules/
+dist/
+build/
+.turbo/
+*.tsbuildinfo
+.pnpm-store/
+
+# Vite
+apps/web/dist/
+apps/web/.vite/
+
+# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.venv/
+venv/
+env/
+.env/
+*.egg-info/
+dist/
+*.egg
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+.hypothesis/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ruff
+.ruff_cache/
+
+# ─── ML / Models ─────────────────────────────────────────────────────────────
+# Don't commit large model weights
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+models/
+.cache/huggingface/
+
+# ─── Environment ─────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.staging
+*.pem
+*.key
+
+# ─── Docker ──────────────────────────────────────────────────────────────────
+.docker/
+
+# ─── IDE / Editor ────────────────────────────────────────────────────────────
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ─── OS ──────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ─── Test Outputs ────────────────────────────────────────────────────────────
+coverage/
+test-results/
+playwright-report/
+*.snap
+
+# ─── Build Artifacts ─────────────────────────────────────────────────────────
+*.tgz
+*.zip
+
+# ─── Temporary / Scratch ─────────────────────────────────────────────────────
+tmp/
+scratch/
