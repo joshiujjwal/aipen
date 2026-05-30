@@ -158,3 +158,24 @@ Smart Pen (BLE/USB)
       ▼
 [PostgreSQL: users, notes, recognition jobs]
 ```
+
+## 🚀 Improvement Proposals
+
+### First-Principles Analysis
+- AIPen is a **hardware-dependent software product** — the value proposition collapses without a supported smart pen, yet no concrete device is named.
+- The inference pipeline overlaps with existing note-digitization products, so the likely differentiation is cloud sync and LLM-based structuring rather than OCR alone.
+- The monorepo with four services introduces substantial complexity before the hardware dependency is even validated.
+- Handwriting quality varies widely by user, so baseline model accuracy will likely feel unreliable without personalization.
+
+### Key Risks & Assumptions
+- **BLE/USB hardware compatibility is assumed but undefined** — the capture layer is still underspecified.
+- **Cloud TrOCR inference may be heavy and slow** — users expect near-immediate recognition from note capture flows.
+- **Integration goals like Notion export are more complex than they look** — OAuth, mapping, and rate limits can dominate scope.
+- **A separate mobile app doubles product surface area too early** — validation may be possible without it.
+
+### Concrete Improvement Ideas
+1. **Name and test against one specific pen** — pick a real device and document the protocol so the capture path becomes concrete.
+2. **Build a pen-agnostic image-upload mode first** — validate OCR, structuring, and export flows without waiting on hardware.
+3. **Evaluate on-device inference** — reduce latency and improve privacy by exploring quantized local models.
+4. **Scope the MVP to web-only** — delay React Native until the core pipeline works reliably.
+5. **Add a per-user handwriting calibration flow** — this is likely the biggest lever on recognition quality and retention.
